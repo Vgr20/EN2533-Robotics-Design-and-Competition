@@ -1,0 +1,32 @@
+if ((leftMIR->getValue() < 400) || (leftIR->getValue() < 400) || (rightIR->getValue() <  400) || (midIR->getValue() < 400) || (rightMIR->getValue() < 400)){
+      iswallFollow=false;
+    } else{ 
+      iswallFollow=true;
+    }
+    std::cout<<"wallfollow: "<<iswallFollow<<std::endl;
+    
+    if (iswallFollow==false){
+      T_junctioncheck(kp,kd,ki,baseSpeed);
+        
+      if (isTjunction==false){
+        lineFollow(kp,kd,ki,baseSpeed);
+      } else {
+        T_junctionFollow(kp,kd,ki,baseSpeed);
+      }
+    } else{
+        wallFollow(kp,kd,ki,baseSpeed);
+        }
+
+
+
+
+
+
+
+T_junctioncheck(kp,kd,ki,baseSpeed);
+        
+      if (isTjunction==false){
+        lineFollow(kp,kd,ki,baseSpeed);
+      } else {
+        T_junctionFollow(kp,kd,ki,baseSpeed);
+      }

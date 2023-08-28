@@ -1,0 +1,119 @@
+#VRML_OBJ R2021b utf8
+SliderJoint {
+  jointParameters JointParameters {
+    position 0.0022852623521607083
+    axis 0 1 0
+  }
+  device [
+    LinearMotor {
+      maxPosition 0.4
+    }
+  ]
+  endPoint Solid {
+    translation -0.041 0.2022852623521607 7.67137e-08
+    rotation 5.14477e-07 1 -7.64079e-07 -1.5708053071795867
+    children [
+      DEF hinge_joint_01 HingeJoint {
+        jointParameters HingeJointParameters {
+          position 2.1539601868066468e-07
+          axis 0 1 0
+          anchor 0.0125 1 0
+        }
+        device [
+          RotationalMotor {
+          }
+        ]
+        endPoint Solid {
+          translation -0.015261100011165853 -0.0002999999999990788 0.0564230999945062
+          rotation -0.3911860342373356 0.015677601368484086 0.9201780802828317 3.1415926535866907
+          children [
+            DEF arm_1 Solid {
+              translation -0.008 0 0.0196
+              rotation 0 1 0 2.356
+              children [
+                DEF hj2 Shape {
+                  appearance PBRAppearance {
+                  }
+                  geometry Box {
+                    size 0.005 0.005 0.025
+                  }
+                }
+              ]
+              boundingObject USE hj2
+              physics Physics {
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                roughness 0.5
+              }
+              geometry DEF hj2 Box {
+                size 0.005 0.005 0.025
+              }
+            }
+          ]
+          name "solid(1)"
+          boundingObject USE hj2
+          physics Physics {
+          }
+        }
+      }
+      DEF hinge_joint_02 HingeJoint {
+        jointParameters HingeJointParameters {
+          position 2.1439405316045712e-07
+          axis 0 1 0
+          anchor 0.0125 1 0
+        }
+        device [
+          RotationalMotor {
+          }
+        ]
+        endPoint Solid {
+          translation 0.014142299897574023 2.220446049250313e-16 0.05585780000301148
+          rotation 1.6781498496203932e-09 1 4.513274146082197e-10 0.7853982131762519
+          children [
+            DEF arm_2 Solid {
+              translation -0.008 0 0.0196
+              rotation 0 1 0 2.356
+              children [
+                DEF hj2 Shape {
+                  appearance PBRAppearance {
+                  }
+                  geometry Box {
+                    size 0.005 0.005 0.025
+                  }
+                }
+              ]
+              boundingObject USE hj2
+              physics Physics {
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                roughness 0.5
+              }
+              geometry DEF hj2 Box {
+                size 0.005 0.005 0.025
+              }
+            }
+          ]
+          boundingObject USE hj2
+          physics Physics {
+          }
+        }
+      }
+      Shape {
+        appearance PBRAppearance {
+          roughness 0.5
+        }
+        geometry DEF sliderjoint Box {
+          size 0.02 0.02 0.1
+        }
+      }
+    ]
+    name "solid(1)"
+    boundingObject USE sliderjoint
+    physics Physics {
+    }
+  }
+}
